@@ -270,6 +270,9 @@ class TooltipPopoverWrapper extends React.Component {
     ['click', 'touchstart'].forEach(event =>
       document.removeEventListener(event, this.handleDocumentClick, true)
     );
+
+    this.clearShowTimeout();
+    this.clearHideTimeout();
   }
 
   updateTarget() {
